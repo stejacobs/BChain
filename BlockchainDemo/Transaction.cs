@@ -40,6 +40,7 @@ namespace BCTestDemo
         public string OwnerName { get; set; }
         public int Amount { get; set; }
         public string transid { get; set; } = Guid.NewGuid().ToString("N").ToUpper();
+        public string customer { get; set; } = Program.customers[Program.genRandNum()];
 
 
         public Transaction(string fromAddress, string toAddress, int amount, string owerName)
@@ -48,7 +49,7 @@ namespace BCTestDemo
             ToAddress = toAddress;
             Amount = amount;
             OwnerName = owerName;
-             //Unique Identifier for transaction
+           
         }
     }
 }

@@ -127,7 +127,7 @@ namespace BCTestDemo
         public static int genRandNum()
         {
             Random random = new Random();
-            return random.Next(0, 3);
+            return random.Next(0, 2);
             
 
         }
@@ -142,7 +142,7 @@ namespace BCTestDemo
                 foreach (var trn in cn.Transactions)
                 {
                     //var result = trn.transid + "," + trn.FromAddress + "," + trn.ToAddress + "," + trn.OwnerName + "," + trn.Amount;
-                    Console.WriteLine("\n{0}", trn.transid + "," + trn.FromAddress + "," +
+                    Console.WriteLine("\n{0}", trn.transid + "," + trn.customer + "," + trn.FromAddress + "," +
                                                trn.ToAddress + "," + trn.OwnerName + "," + trn.Amount);
                 }
             }
