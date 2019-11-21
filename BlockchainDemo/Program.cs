@@ -15,6 +15,9 @@ namespace BCTestDemo
         public static Blockchain BCDemo = new Blockchain();
         public static string name = "unknown";
 
+        //for testing
+        public static string [] customers = new string [] {"Chase", "Wells", "Steve Bank"};
+
         static void Main(string[] args)
         {
             BCDemo.InitializeChain();
@@ -119,6 +122,14 @@ namespace BCTestDemo
                     Client = null;
                 }
             }
+        }
+
+        public static int genRandNum()
+        {
+            Random random = new Random();
+            return random.Next(0, 3);
+            
+
         }
 
         private static void JournalOutput(string obj)

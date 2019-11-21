@@ -62,6 +62,7 @@ namespace BCTestDemo
             Block latestBlock = GetLatestBlock();
             block.Index = latestBlock.Index + 1;
             block.PreviousHash = latestBlock.Hash;
+            block.customer = Program.customers[Program.genRandNum()]; //for testing
             //block.Hash = block.CalculateHash(); <-- Not being calculated here but could be
             block.Mine(this.Difficulty);
             Chain.Add(block);
